@@ -14,8 +14,7 @@ class _MainShellState extends State<MainShell> {
   int _index = 0;
 
   Widget _placeholder(String t) => Center(
-      child: Text('$t (not part of this test)',
-          style: const TextStyle(color: AppColors.textGrey)));
+      child: Text('$t ', style: const TextStyle(color: AppColors.textGrey)));
 
   Widget _navIcon(IconData icon, int i) => IconButton(
         icon: Icon(icon,
@@ -38,7 +37,8 @@ class _MainShellState extends State<MainShell> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
-        shape: const CircleBorder(side: BorderSide(color: Colors.white, width: 3)),
+        shape:
+            const CircleBorder(side: BorderSide(color: Colors.white, width: 3)),
         onPressed: () => Navigator.push(context,
             MaterialPageRoute(builder: (_) => const ExpenseFormScreen())),
         child: const Icon(Icons.add, size: 30),
